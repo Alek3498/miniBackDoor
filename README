@@ -1,9 +1,4 @@
-    Bienvenidos a este curso gratuito de desarrollo de Python en el que aprenderemos muchas cosas, enfocándonos principalmente al desarrollo de herramientas de acceso remoto totalmente desde 0 utilizando este lenguaje que tanto ha dado de que hablar en los últimos años.
-
-    El acceso remoto a un sistema forma parte de las etapas finales de un test de intrusión y aun que existen muchas herramientas que nos pueden ayudar a esto, ¿Por qué no crear nosotros nuestra propia herramientas? - Pues bueno... ¡Vamos a ello!
-
-    A lo largo de este curso aprenderemos cosas que el escribirlas sería algo complicado, ¿Qué tal si las entendemos directamente el código? - Inscribete, ¡ ES GRATIS !
-    What you’ll learn
+    MiniBackDoor
 
         🐍 [+] Desarrollo de herramientas de acceso remoto
         🐍 [+] Dominio del modulo SOCKET de Python
@@ -15,11 +10,5 @@
         🐍 [+] Manejo de la librería base64
         🐍 [+] Comprensión de las claves de registro de Windows
 
-    Are there any course requirements or prerequisites?
 
-        Conocimiento medio a avanzado de Python
-        Un cerebro
 
-    Who this course is for:
-
-        Publico en general que busque obtener el conocimiento necesario para desarrollar sus propias herramientas
