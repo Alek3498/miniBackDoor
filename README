@@ -1,14 +1,6 @@
     MiniBackDoor
 
-        🐍 [+] Desarrollo de herramientas de acceso remoto
-        🐍 [+] Dominio del modulo SOCKET de Python
-        🐍 [+] Interacción con interfaces de red desde Python
-        🐍 [+] Comprensión del modelo Cliente - Servidor
-        🐍 [+] Conceptos sobre redes y comunicaciones
-        🐍 [+] Transferencia de archivos de manera remota
-        🐍 [+] Ejecución de comandos desde Python
-        🐍 [+] Manejo de la librería base64
-        🐍 [+] Comprensión de las claves de registro de Windows
+       Not really a backdoor. it's a mini client-server utility to test some python's functions
 
 
 
