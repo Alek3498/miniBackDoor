@@ -1,6 +1,11 @@
     MiniBackDoor
 
-       Not really a backdoor. it's a mini client-server utility to test some python's functions
+    Not really a backdoor. it's a mini client-server utility to test some python's functions
+    Still under developing
+
+    1- Implement a reverse shell
+    2- Implement a upload / download of a file.
+    3- ??
 
 
 
